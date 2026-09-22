@@ -6,7 +6,7 @@
 /*   By: mohammah <mohammah@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/22 15:25:41 by mohammah          #+#    #+#             */
-/*   Updated: 2026/09/23 02:05:25 by mohammah         ###   ########.fr       */
+/*   Updated: 2026/09/23 02:14:27 by mohammah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ static int	read_stash(int fd, char **stash)
 	ssize_t	bytes_read;
 	char	*new_stash;
 
-	while (!ft_strchr(buffer, '\n'))
+	while (!*stash || !ft_strchr(*stash, '\n'))
 	{
 		bytes_read = read(fd, buffer, BUFFER_SIZE);
 		if (bytes_read < 0)
