@@ -1,0 +1,4 @@
+Hello ma fucking world
+This is get_next_line
+42 is teasing me 
+Last line without newline
