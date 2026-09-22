@@ -6,7 +6,7 @@
 /*   By: mohammah <mohammah@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/22 15:25:41 by mohammah          #+#    #+#             */
-/*   Updated: 2026/09/23 02:14:27 by mohammah         ###   ########.fr       */
+/*   Updated: 2026/09/23 02:17:24 by mohammah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ static int	read_stash(int fd, char **stash)
 
 char	*get_next_line(int fd)
 {
-	static char *stash;
+	static char	*stash;
 	int			read_results;
 	char		*line;
 	char		*new_stash;
