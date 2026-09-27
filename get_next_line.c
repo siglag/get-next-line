@@ -6,7 +6,7 @@
 /*   By: mohammah <mohammah@learner.42.tech>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/22 15:25:41 by mohammah          #+#    #+#             */
-/*   Updated: 2026/09/23 02:17:24 by mohammah         ###   ########.fr       */
+/*   Updated: 2026/09/27 12:06:58 by mohammah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,13 @@
 
 static int	read_stash(int fd, char **stash)
 {
-	char	buffer[BUFFER_SIZE + 1];
+	char	*buffer;
 	ssize_t	bytes_read;
 	char	*new_stash;
 
+	buffer = malloc(BUFFER_SIZE + 1);
+	if (!buffer)
+		return (-1);
 	while (!*stash || !ft_strchr(*stash, '\n'))
 	{
 		bytes_read = read(fd, buffer, BUFFER_SIZE);
